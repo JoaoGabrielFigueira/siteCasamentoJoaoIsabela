@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administração - Confirmações</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;0,6..96,700;1,6..96,400&family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;1,400&family=Pinyon+Script&display=swap" rel="stylesheet">
+    <style>
+        .admin-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        .admin-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .admin-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .stat-card {
+            background-color: var(--color-white);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(44, 44, 44, 0.08);
+        }
+        
+        .stat-number {
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            font-weight: 600;
+            color: var(--color-accent);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            color: var(--color-text);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .admin-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn-action {
+            padding: 0.75rem 2rem;
+            background-color: var(--color-text);
+            color: var(--color-bg);
+            border: none;
+            border-radius: 8px;
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-action:hover {
+            background-color: var(--color-accent);
+            transform: translateY(-2px);
+        }
+        
+        .btn-action.secondary {
+            background-color: transparent;
+            color: var(--color-text);
+            border: 2px solid var(--color-text);
+        }
+        
+        .btn-action.secondary:hover {
+            background-color: var(--color-text);
+            color: var(--color-bg);
+        }
+        
+        .confirmations-list {
+            display: grid;
+            gap: 1.5rem;
+        }
+        
+        .confirmation-item {
+            background-color: var(--color-white);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(44, 44, 44, 0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .confirmation-info {
+            flex: 1;
+        }
+        
+        .confirmation-name {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--color-text);
+            margin-bottom: 0.5rem;
+        }
+        
+        .confirmation-details {
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            color: var(--color-text);
+            opacity: 0.7;
+        }
+        
+        .confirmation-status {
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .status-confirmado {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        
+        .status-recusado {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 4rem 2rem;
+            background-color: var(--color-white);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(44, 44, 44, 0.08);
+        }
+        
+        .empty-state p {
+            font-family: var(--font-sans);
+            font-size: 1.1rem;
+            color: var(--color-text);
+            opacity: 0.7;
+        }
+        
+        @media (max-width: 768px) {
+            .admin-container {
+                padding: 2rem 1rem;
+            }
+            
+            .admin-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .confirmation-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .confirmation-status {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
+        <nav class="nav" id="main-nav">
+            <a href="galeria.html" class="nav-link">GALERIA</a>
+            <a href="sobre.html" class="nav-link">SOBRE NÓS</a>
+            <a href="presentes.html" class="nav-link">PRESENTES</a>
+            <a href="confirmar.html" class="btn-book mobile-only" style="text-decoration: none; display: none;">CONFIRMAR PRESENÇA</a>
+        </nav>
+        
+        <div class="logo-container">
+            <a href="index.html" style="text-decoration: none; color: inherit;">
+                <h1 class="logo-main">Isabela & João</h1>
+            </a>
+        </div>
+        
+        <div class="header-right">
+            <a href="confirmar.html" class="btn-book" style="text-decoration: none; display: inline-block;">CONFIRMAR PRESENÇA</a>
+        </div>
+    </header>
+
+    <div class="admin-container">
+        <div class="admin-header">
+            <h1 class="section-title">CONFIRMAÇÕES DE PRESENÇA</h1>
+        </div>
+        
+        <div class="admin-stats" id="stats">
+            <div class="stat-card">
+                <div class="stat-number" id="total-confirmados">0</div>
+                <div class="stat-label">Confirmados</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="total-recusados">0</div>
+                <div class="stat-label">Recusados</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="total-geral">0</div>
+                <div class="stat-label">Total</div>
+            </div>
+        </div>
+        
+        <div class="admin-actions">
+            <button class="btn-action" onclick="filtrarConfirmacoes('todos')">Todos</button>
+            <button class="btn-action secondary" onclick="filtrarConfirmacoes('confirmado')">Confirmados</button>
+            <button class="btn-action secondary" onclick="filtrarConfirmacoes('recusado')">Recusados</button>
+            <button class="btn-action secondary" onclick="exportarDados()">Exportar CSV</button>
+            <button class="btn-action secondary" onclick="limparDados()">Limpar Tudo</button>
+        </div>
+        
+        <div class="confirmations-list" id="confirmations-list">
+            <!-- Lista será preenchida via JavaScript -->
+        </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="api-service.js"></script>
+    <script src="script.js"></script>
+    <script>
+        let todasConfirmacoes = [];
+        let filtroAtual = 'todos';
+        
+        async function carregarConfirmacoes() {
+            try {
+                const resultado = await apiService.buscarConfirmacoes();
+                if (resultado.success) {
+                    todasConfirmacoes = resultado.data || [];
+                } else {
+                    console.error('Erro ao carregar:', resultado.error);
+                    todasConfirmacoes = [];
+                }
+            } catch (error) {
+                console.error('Erro ao carregar confirmações:', error);
+                todasConfirmacoes = [];
+            }
+            atualizarEstatisticas();
+            exibirConfirmacoes();
+        }
+        
+        function atualizarEstatisticas() {
+            const confirmados = todasConfirmacoes.filter(c => c.status === 'confirmado').length;
+            const recusados = todasConfirmacoes.filter(c => c.status === 'recusado').length;
+            const total = todasConfirmacoes.length;
+            
+            document.getElementById('total-confirmados').textContent = confirmados;
+            document.getElementById('total-recusados').textContent = recusados;
+            document.getElementById('total-geral').textContent = total;
+        }
+        
+        function exibirConfirmacoes() {
+            const lista = document.getElementById('confirmations-list');
+            lista.innerHTML = '';
+            
+            let confirmacoesFiltradas = todasConfirmacoes;
+            
+            if (filtroAtual !== 'todos') {
+                confirmacoesFiltradas = todasConfirmacoes.filter(c => c.status === filtroAtual);
+            }
+            
+            // Ordenar por data (mais recentes primeiro)
+            confirmacoesFiltradas.sort((a, b) => b.timestamp - a.timestamp);
+            
+            if (confirmacoesFiltradas.length === 0) {
+                lista.innerHTML = `
+                    <div class="empty-state">
+                        <p>Nenhuma confirmação encontrada${filtroAtual !== 'todos' ? ` com status "${filtroAtual}"` : ''}.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            confirmacoesFiltradas.forEach(conf => {
+                const item = document.createElement('div');
+                item.className = 'confirmation-item';
+                
+                const data = new Date(conf.data);
+                const dataFormatada = data.toLocaleDateString('pt-BR', {
+                    day: '2-digit',
+                    month: '2-digit',
+                    year: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                });
+                
+                item.innerHTML = `
+                    <div class="confirmation-info">
+                        <div class="confirmation-name">${conf.nome}</div>
+                        <div class="confirmation-details">
+                            Apelido: ${conf.apelido} • ${dataFormatada}
+                        </div>
+                    </div>
+                    <div class="confirmation-status status-${conf.status}">
+                        ${conf.status === 'confirmado' ? '✓ Confirmado' : '✗ Recusado'}
+                    </div>
+                `;
+                
+                lista.appendChild(item);
+            });
+        }
+        
+        function filtrarConfirmacoes(status) {
+            filtroAtual = status;
+            
+            // Atualizar botões
+            document.querySelectorAll('.btn-action').forEach(btn => {
+                btn.classList.remove('secondary');
+            });
+            
+            const botoes = document.querySelectorAll('.btn-action');
+            if (status === 'todos') {
+                botoes[0].classList.remove('secondary');
+                botoes[1].classList.add('secondary');
+                botoes[2].classList.add('secondary');
+            } else if (status === 'confirmado') {
+                botoes[0].classList.add('secondary');
+                botoes[1].classList.remove('secondary');
+                botoes[2].classList.add('secondary');
+            } else {
+                botoes[0].classList.add('secondary');
+                botoes[1].classList.add('secondary');
+                botoes[2].classList.remove('secondary');
+            }
+            
+            exibirConfirmacoes();
+        }
+        
+        function exportarDados() {
+            if (todasConfirmacoes.length === 0) {
+                alert('Não há dados para exportar.');
+                return;
+            }
+            
+            // Criar CSV
+            let csv = 'Nome,Apelido,Status,Data\n';
+            todasConfirmacoes.forEach(conf => {
+                const data = new Date(conf.data).toLocaleDateString('pt-BR');
+                csv += `"${conf.nome}","${conf.apelido}","${conf.status}","${data}"\n`;
+            });
+            
+            // Download
+            const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement('a');
+            const url = URL.createObjectURL(blob);
+            link.setAttribute('href', url);
+            link.setAttribute('download', `confirmacoes_${new Date().toISOString().split('T')[0]}.csv`);
+            link.style.visibility = 'hidden';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+        
+        async function limparDados() {
+            if (confirm('Tem certeza que deseja limpar todas as confirmações? Esta ação não pode ser desfeita.\n\nNOTA: Isso limpará apenas os dados locais. Para limpar a planilha do Google, faça manualmente.')) {
+                localStorage.removeItem('confirmacoes');
+                await carregarConfirmacoes();
+                alert('Dados locais foram limpos. A planilha do Google não foi alterada.');
+            }
+        }
+        
+        // Carregar dados ao iniciar
+        document.addEventListener('DOMContentLoaded', () => {
+            carregarConfirmacoes();
+        });
+    </script>
+</body>
+</html>

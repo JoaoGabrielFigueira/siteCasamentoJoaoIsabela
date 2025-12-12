@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Presentes - Nosso Casamento</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;0,6..96,700;1,6..96,400&family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;1,400&family=Pinyon+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
+        <nav class="nav" id="main-nav">
+            <a href="galeria.html" class="nav-link">GALERIA</a>
+            <a href="sobre.html" class="nav-link">SOBRE NÓS</a>
+            <a href="presentes.html" class="nav-link">PRESENTES</a>
+            <a href="confirmar.html" class="btn-book mobile-only" style="text-decoration: none; display: none;">CONFIRMAR PRESENÇA</a>
+        </nav>
+        
+        <div class="logo-container">
+            <a href="index.html" style="text-decoration: none; color: inherit;">
+                <h1 class="logo-main">Isabela & João</h1>
+            </a>
+        </div>
+        
+        <div class="header-right">
+            <a href="confirmar.html" class="btn-book" style="text-decoration: none; display: inline-block;">CONFIRMAR PRESENÇA</a>
+        </div>
+    </header>
+
+    <!-- Lista de Presentes Section -->
+    <section class="gifts-section">
+        <div class="gifts-container">
+            <h2 class="section-title" style="text-align: center;">
+                LISTA DE <span class="script-text">presentes</span>
+            </h2>
+            
+            <p class="gifts-intro">
+                Sua presença já é o maior presente! Mas se quiser nos presentear, aqui estão algumas sugestões que nos deixariam muito felizes.
+            </p>
+            
+            <!-- Lista de Itens -->
+            <div class="gifts-list">
+                <article class="gift-item" data-title="Televisão" data-price="1599.00" data-checkout="https://mpago.la/2aHwJzh">
+                    <img class="gift-thumb" src="images/televisao.jpg" alt="Televisão">
+                    <div class="gift-body">
+                        <h3 class="gift-title">Televisão</h3>
+                        <p class="gift-desc">Smart TV 50" 4K LED Philco P50EAA UHD Android TV Chromecast Borda Infinita</p>
+                        <div class="gift-actions">
+                            <button class="buy-button" data-id="g1">Comprar</button>
+                        </div>
+                    </div>
+                </article>
+                                
+                
+                <article class="gift-item" data-title="Geladeira" data-price="2899.00" data-checkout="https://mpago.la/2sBPdAs">
+                    <img class="gift-thumb" src="images/geladeira.jpg" alt="Caixa de Vinhos">
+                    <div class="gift-body">
+                    <h3 class="gift-title">Geladeira</h3>
+                    <p class="gift-desc">Geladeira Consul CRM44MK Duplex Inverter 377L Frost Free Inox - 110V</p>
+                    <div class="gift-actions">
+                        <button class="buy-button" data-id="g2">Comprar</button>
+                    </div>
+                    </div>
+                </article>
+  
+                <article class="gift-item" data-title="Panela Elétrica" data-price="150.00" data-checkout="https://mpago.la/12KoYjH">
+                    <img class="gift-thumb" src="images/panela de arroz.jpg" alt="Vale Viagem">
+                    <div class="gift-body">
+                    <h3 class="gift-title">Panela Elétrica</h3>
+                    <p class="gift-desc">Panela Elétrica de Arroz Philco PH5 Visor Glass 5 Xícaras - Preta/Inox - 110V</p>
+                    <div class="gift-actions">
+                        <button class="buy-button" data-id="g3">Comprar</button>
+                    </div>
+                    </div>
+                </article>
+  
+                <!-- Novos itens -->
+                <article class="gift-item" data-title="Liquidificador" data-price="120.00" data-checkout="https://mpago.la/2vMCXBm">
+                    <img class="gift-thumb" src="images/liquidificador.jpg" alt="Jogo de Panelas">
+                    <div class="gift-body">
+                    <h3 class="gift-title">Liquidificador</h3>
+                    <p class="gift-desc">Liquidificador Philco PH900 Preto 1200W com 12 Velocidades - 110V</p>
+                    <div class="gift-actions">
+                        <button class="buy-button" data-id="g4">Comprar</button>
+                    </div>
+                    </div>
+                </article>
+  
+                <article class="gift-item" data-title="Batedeira" data-price="90.00" data-checkout="https://mpago.la/1NLfJNU">
+                    <img class="gift-thumb" src="images/batedeira.jpg" alt="Máquina de Café">
+                    <div class="gift-body">
+                    <h3 class="gift-title">Batedeira</h3>
+                    <p class="gift-desc">Batedeira Mondial Prática Black B-44 com 3 Velocidades – Preta - 110V</p>
+                    <div class="gift-actions">
+                        <button class="buy-button" data-id="g5">Comprar</button>
+                    </div>
+                    </div>
+                </article>
+  
+                <article class="gift-item" data-title="Jogo de Copos" data-price="74.98" data-checkout="https://mpago.la/2xCtzQC">
+                    <img class="gift-thumb" src="images/jogo de copo.jpg" alt="Jogos de Lençóis">
+                    <div class="gift-body">
+                    <h3 class="gift-title">Jogos de Copos</h3>
+                    <p class="gift-desc">Jogo com 6 Copos Conjunto de Peças de Vidro Transparente, Linha 423ml para Suco e Água</p>
+                    <div class="gift-actions">
+                        <button class="buy-button" data-id="g6">Comprar</button>
+                    </div>
+                    </div>
+                </article>
+  
+                <article class="gift-item" data-title="Jogo de Taças" data-price="100.00" data-checkout="https://mpago.la/1CKcEjq">
+                    <img class="gift-thumb" src="images/jogo de taca.jpg" alt="Jogos de Lençóis">
+                    <div class="gift-body">
+                    <h3 class="gift-title">Jogos de Taças</h3>
+                    <p class="gift-desc">Jogo de 6 tacas para vinho branco Xtra em cristal ecologico 360ml A23,5cm</p>
+                    <div class="gift-actions">
+                        <button class="buy-button" data-id="g6">Comprar</button>
+                    </div>
+                    </div>
+                </article>
+  
+                <article class="gift-item" data-title="Jogo de Panelas" data-price="300.00" data-checkout="https://mpago.la/1L8LDR5">
+                    <img class="gift-thumb" src="images/jogo panelas.jpg" alt="Jogos de Lençóis">
+                    <div class="gift-body">
+                    <h3 class="gift-title">Jogos de Panelas</h3>
+                    <p class="gift-desc">Jogo de Panelas Tramontina Paris Antiaderente Starflon Max Grafite 10 Peças</p>
+                    <div class="gift-actions">
+                        <button class="buy-button" data-id="g6">Comprar</button>
+                    </div>
+                    </div>
+                </article>
+  
+                <article class="gift-item" data-title="Faqueiro" data-price="97.00" data-checkout="https://mpago.la/1pvXK7m">
+                    <img class="gift-thumb" src="images/brinox.jpg" alt="Jogos de Lençóis">
+                    <div class="gift-body">
+                    <h3 class="gift-title">Faqueiro</h3>
+                    <p class="gift-desc">Brinox - Faqueiro Siena 42 Peças - Aço Inox</p>
+                    <div class="gift-actions">
+                        <button class="buy-button" data-id="g6">Comprar</button>
+                    </div>
+                    </div>
+                </article>
+  
+                <article class="gift-item" data-title="Pote Hermetico" data-price="58.00" data-checkout="https://mpago.la/1ZoF4Hi">
+                    <img class="gift-thumb" src="images/pote hermetico.jpg" alt="Jogos de Lençóis">
+                    <div class="gift-body">
+                    <h3 class="gift-title">Potes</h3>
+                    <p class="gift-desc">Pote Hermetico, 12 unidades</p>
+                    <div class="gift-actions">
+                        <button class="buy-button" data-id="g6">Comprar</button>
+                    </div>
+                    </div>
+                </article>
+  
+                <article class="gift-item" data-title="ventilador" data-price="179.90" data-checkout="https://mpago.la/1eojUp6">
+                    <img class="gift-thumb" src="images/ventilador.jpg" alt="Jogos de Lençóis">
+                    <div class="gift-body">
+                    <h3 class="gift-title">Ventilador</h3>
+                    <p class="gift-desc">Ventilador de Coluna Britânia BVT350 Maxx Force 75W 127V</p>
+                    <div class="gift-actions">
+                        <button class="buy-button" data-id="g6">Comprar</button>
+                    </div>
+                    </div>
+                </article>
+  
+                <article class="gift-item" data-title="Kit Edredom" data-price="150.00" data-checkout="https://mpago.la/1qVs2Vx">
+                    <img class="gift-thumb" src="images/kit edredom.jpg" alt="Jogos de Lençóis">
+                    <div class="gift-body">
+                    <h3 class="gift-title">Edredom</h3>
+                    <p class="gift-desc">Kit Edredom Jogo de Cama Dupla Face 6 Peças Queen (Cinza)</p>
+                    <div class="gift-actions">
+                        <button class="buy-button" data-id="g6">Comprar</button>
+                    </div>
+                    </div>
+                </article>
+  
+                <article class="gift-item" data-title="Ferro de passar" data-price="90.00" data-checkout="https://mpago.la/1NLfJNU">
+                    <img class="gift-thumb" src="images/ferro.jpg" alt="Jogos de Lençóis">
+                    <div class="gift-body">
+                    <h3 class="gift-title">Ferro de passar</h3>
+                    <p class="gift-desc">Ferro de passar seco e vapor Electrolux base antiaderente vapor vertical extra 1200W cabo 1,35m azul ESI10 127v</p>
+                    <div class="gift-actions">
+                        <button class="buy-button" data-id="g6">Comprar</button>
+                    </div>
+                    </div>
+                </article>
+  
+                <article class="gift-item" data-title="Rack para Tv" data-price="299.99" data-checkout="https://mpago.la/1X883HH">
+                    <img class="gift-thumb" src="images/rack.jpg" alt="Jogos de Lençóis">
+                    <div class="gift-body">
+                    <h3 class="gift-title">Rack</h3>
+                    <p class="gift-desc">Rack para Tv ate 75" com 2 portas CHARLOTTE cor Pinho/Off White - Artely</p>
+                    <div class="gift-actions">
+                        <button class="buy-button" data-id="g6">Comprar</button>
+                    </div>
+                    </div>
+                </article>
+  
+                <article class="gift-item" data-title="Luminaria Pendente" data-price="39.00" data-checkout="https://mpago.la/1eJLhgB">
+                    <img class="gift-thumb" src="images/pendente.jpg" alt="Jogos de Lençóis">
+                    <div class="gift-body">
+                    <h3 class="gift-title">Pendente</h3>
+                    <p class="gift-desc">Pendente Luminária Lustre Base Tripla Fio Regulável</p>
+                    <div class="gift-actions">
+                        <button class="buy-button" data-id="g6">Comprar</button>
+                    </div>
+                    </div>
+                </article>
+  
+                <article class="gift-item" data-title="Luminaria" data-price="74.00" data-checkout="https://mpago.la/25wHNzy">
+                    <img class="gift-thumb" src="images/luminaria.jpg" alt="Jogos de Lençóis">
+                    <div class="gift-body">
+                        <h3 class="gift-title">Luminaria</h3>
+                        <p class="gift-desc">Luminaria de Teto, Lustre Sala, Pendente, Luminária de Teto, Lustre Quarto, para Sala de Jantar, Luminaria Pendente</p>
+                        <div class="gift-actions">
+                        <button class="buy-button" data-id="g6">Comprar</button>
+                        </div>
+                    </div>
+                </article>
+  
+                <article class="gift-item" data-title="Abajur" data-price="66.99" data-checkout="https://mpago.la/3179dGP">
+                    <img class="gift-thumb" src="images/abajur.jpg" alt="Jogos de Lençóis">
+                    <div class="gift-body">
+                        <h3 class="gift-title">Abajur</h3>
+                        <p class="gift-desc">Abajur de Mesa Dourado com Cúpula Branca – Toque Sofisticado para sua Decoração</p>
+                        <div class="gift-actions">
+                        <button class="buy-button" data-id="g6">Comprar</button>
+                        </div>
+                    </div>
+                </article>
+  
+                <article class="gift-item" data-title="Kit Potes" data-price="17.50" data-checkout="https://mpago.la/2PJdRy3">
+                    <img class="gift-thumb" src="images/kit potes.jpg" alt="Jogos de Lençóis">
+                    <div class="gift-body">
+                        <h3 class="gift-title">Potes</h3>
+                        <p class="gift-desc">Kit 10 Potes Plásticos 350ml Transparentes Container Retangular</p>
+                        <div class="gift-actions">
+                        <button class="buy-button" data-id="g6">Comprar</button>
+                        </div>
+                    </div>
+                </article>
+  
+                <article class="gift-item" data-title="Cortina" data-price="65.00" data-checkout="https://mpago.la/1FcoDv9">
+                    <img class="gift-thumb" src="images/cortina.jpg" alt="Jogos de Lençóis">
+                    <div class="gift-body">
+                        <h3 class="gift-title">Cortinas</h3>
+                        <p class="gift-desc">Cortina Roma Para Sala e Quarto 4,00 x 2,50 Admirare Cor: Creme</p>
+                        <div class="gift-actions">
+                        <button class="buy-button" data-id="g6">Comprar</button>
+                        </div>
+                    </div>
+                </article>    
+  
+                <article class="gift-item" data-title="Espelho" data-price="40.80" data-checkout="https://mpago.la/2rdadJD">
+                    <img class="gift-thumb" src="images/espelho.jpg" alt="Jogos de Lençóis">
+                    <div class="gift-body">
+                        <h3 class="gift-title">Espelho</h3>
+                        <p class="gift-desc">LYOR - Espelho Orgânico com Borda de Metal Dourado 21cm x 35cm</p>
+                        <div class="gift-actions">
+                        <button class="buy-button" data-id="g6">Comprar</button>
+                        </div>
+                    </div>
+                </article> 
+  
+                <article class="gift-item" data-title="Panificadora" data-price="650.00" data-checkout="https://mpago.la/1hQNZ6i">
+                    <img class="gift-thumb" src="images/panificadora.jpg" alt="Jogos de Lençóis">
+                    <div class="gift-body">
+                        <h3 class="gift-title">Panificadora</h3>
+                        <p class="gift-desc">Panificadora, Multipane, 550W, Preto, 220v, Britânia</p>
+                        <div class="gift-actions">
+                        <button class="buy-button" data-id="g6">Comprar</button>
+                        </div>
+                    </div>
+                </article>
+  
+                <article class="gift-item" data-title="Forno Eletrico" data-price="210.00" data-checkout="https://mpago.la/2ZJbQTY">
+                    <img class="gift-thumb" src="images/forno eletrico.jpg" alt="Jogos de Lençóis">
+                    <div class="gift-body">
+                        <h3 class="gift-title">Forno Eletrico</h3>
+                        <p class="gift-desc">Forno Elétrico 43L Britânia BFE43 Dupla Resistência 110V</p>
+                        <div class="gift-actions">
+                        <button class="buy-button" data-id="g6">Comprar</button>
+                        </div>
+                    </div>
+                </article>
+  
+                <article class="gift-item" data-title="Bandeja" data-price="38.00" data-checkout="https://mpago.la/1s654qu">
+                    <img class="gift-thumb" src="images/bandeja.jpg" alt="Jogos de Lençóis">
+                    <div class="gift-body">
+                        <h3 class="gift-title">Ceramica</h3>
+                        <p class="gift-desc">Bandeja Luxo Decorativa com alças Grande Borda Dourada Banheiro Lavabo Multiuso Cantinho do Café</p>
+                        <div class="gift-actions">
+                        <button class="buy-button" data-id="g6">Comprar</button>
+                        </div>
+                    </div>
+                </article>
+  
+                <article class="gift-item" data-title="Cabideiro" data-price="30.00" data-checkout="https://mpago.la/1LFBRzh">
+                    <img class="gift-thumb" src="images/cabide.jpg" alt="Jogos de Lençóis">
+                    <div class="gift-body">
+                        <h3 class="gift-title">Cabides</h3>
+                        <p class="gift-desc">Cabideiro Decorações de Halloween, Fantasias de Halloween, Decoração de Outono, Decoração de Festival</p>
+                        <div class="gift-actions">
+                        <button class="buy-button" data-id="g6">Comprar</button>
+                        </div>
+                    </div>
+                </article>
+  
+                <article class="gift-item" data-title="Cesto de Roupa" data-price="74.00" data-checkout="https://mpago.la/25wHNzy">
+                    <img class="gift-thumb" src="images/cesto.jpg" alt="Jogos de Lençóis">
+                    <div class="gift-body">
+                        <h3 class="gift-title">Cesto de Roupa</h3>
+                        <p class="gift-desc">Cesto De Roupa 72L Bambu Dobravel Organizador Forrado Banheiro Grande Cesto Roupa Suja Retangular</p>
+                        <div class="gift-actions">
+                        <button class="buy-button" data-id="g6">Comprar</button>
+                        </div>
+                    </div>
+                </article>
+  
+                <article class="gift-item" data-title="Queijeira" data-price="50.00" data-checkout="https://mpago.la/2NYPjg2">
+                    <img class="gift-thumb" src="images/queijo.jpg" alt="Jogos de Lençóis">
+                    <div class="gift-body">
+                        <h3 class="gift-title">Queijeira</h3>
+                        <p class="gift-desc">Queijeira De Cerâmica Suporte Para Queijo Travessa Café</p>
+                        <div class="gift-actions">
+                        <button class="buy-button" data-id="g6">Comprar</button>
+                        </div>
+                    </div>
+                </article>
+  
+                <article class="gift-item" data-title="Caixa de Pão" data-price="90.00" data-checkout="https://mpago.la/1NLfJNU">
+                    <img class="gift-thumb" src="images/caixa de pao.jpg" alt="Jogos de Lençóis">
+                    <div class="gift-body">
+                        <h3 class="gift-title">Caixa de Pão</h3>
+                        <p class="gift-desc">Caixa De Pão Bambu Tampa Retrátil Porta Pães E Armazenamento De Biscoitos Bolachas Frutas</p>
+                        <div class="gift-actions">
+                        <button class="buy-button" data-id="g6">Comprar</button>
+                        </div>
+                    </div>
+                </article>
+  
+                <article class="gift-item" data-title="Jogo de Jantar" data-price="250.00" data-checkout="https://mpago.la/1Wjxdmx">
+                    <img class="gift-thumb" src="images/jogo de jantar.jpg" alt="Jogos de Lençóis">
+                    <div class="gift-body">
+                        <h3 class="gift-title">Jogo de Jantar</h3>
+                        <p class="gift-desc">1 AP. DE JANTAR/CHA 20PCS - M. ORDER - BRISA - AW20-5903</p>
+                        <div class="gift-actions">
+                        <button class="buy-button" data-id="g6">Comprar</button>
+                        </div>
+                    </div>
+                </article>
+  
+                <article class="gift-item" data-title="Porcelana" data-price="252.00" data-checkout="https://mpago.la/1tkaR6s">
+                    <img class="gift-thumb" src="images/porcelana.jpg" alt="Jogos de Lençóis">
+                    <div class="gift-body">
+                        <h3 class="gift-title">Porcelana</h3>
+                        <p class="gift-desc">Porcelana Schmidt Serviço de Jantar e Chá 20 peças Relevo Pomerode Branco</p>
+                        <div class="gift-actions">
+                        <button class="buy-button" data-id="g6">Comprar</button>
+                        </div>
+                    </div>
+                </article>
+  
+                <article class="gift-item" data-title="Faqueiro" data-price="65.00" data-checkout="https://mpago.la/1FcoDv9">
+                    <img class="gift-thumb" src="images/faqueiro.jpg" alt="Jogos de Lençóis">
+                    <div class="gift-body">
+                        <h3 class="gift-title">Faqueiro</h3>
+                        <p class="gift-desc">Jogo de Talheres Faqueiro Inox 24 Peças Búzios Tramontina</p>
+                        <div class="gift-actions">
+                        <button class="buy-button" data-id="g6">Comprar</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 - By Isabela & João</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
