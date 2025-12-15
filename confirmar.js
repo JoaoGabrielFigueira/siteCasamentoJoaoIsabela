@@ -191,7 +191,7 @@ const apelidos = {
         'danilo': 'Danilo',
         'eric': 'Eric',
         'amanda': 'Amanda',
-        'jamile': 'Jamile',
+        'Jamilly': 'Jamilly',
         'matheus marques': 'Marquito',
         'bruno': 'Brunão',
         'tiffany': 'Tiffany',
