@@ -36,6 +36,7 @@ const apelidos = {
         'william': 'William',
         'lanna guerra': 'Lanna',
         'mariana guerra': 'Mari',
+        'João Gabriel': 'João Gabriel',
         'cecilia guerra': 'Ceci',
         'jether rodrigues': 'Jether',
         'beatriz nascimento': 'Bia',
