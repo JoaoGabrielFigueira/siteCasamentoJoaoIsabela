@@ -395,30 +395,100 @@ body {
 
 /* Ceremony Section */
 .ceremony-section {
-    padding: 8rem 4rem;
-    background: linear-gradient(135deg, rgba(245, 241, 235, 0.5) 0%, rgba(255, 255, 255, 0.8) 100%);
+    padding: 6rem 4rem;
+    background-color: var(--color-bg);
     position: relative;
-    overflow: hidden;
-}
-
-.ceremony-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: 
-        radial-gradient(circle at 20% 50%, rgba(139, 115, 85, 0.05) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(139, 115, 85, 0.05) 0%, transparent 50%);
-    pointer-events: none;
 }
 
 .ceremony-container {
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
-    z-index: 1;
+}
+
+.ceremony-main-title {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--color-text);
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.ceremony-subtitle {
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    text-align: center;
+    color: var(--color-text);
+    margin-bottom: 4rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.ceremony-content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 4rem;
+    align-items: start;
+    margin-bottom: 4rem;
+}
+
+.ceremony-text-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.ceremony-paragraph {
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--color-text);
+    text-align: left;
+    font-weight: 300;
+}
+
+.ceremony-paragraph strong {
+    font-weight: 500;
+}
+
+.ceremony-numbers-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 3rem;
+    padding-top: 1rem;
+    min-width: 120px;
+}
+
+.ceremony-number {
+    font-family: var(--font-serif);
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--color-text);
+    line-height: 1;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    opacity: 0.9;
+    letter-spacing: -0.02em;
+}
+
+.ceremony-map-container {
+    width: 100%;
+    margin-top: 4rem;
+    border-radius: 0;
+    overflow: hidden;
+}
+
+.ceremony-map {
+    width: 100%;
+    height: 450px;
+    border: none;
+    display: block;
 }
 
 .ceremony-watercolor {
@@ -698,6 +768,22 @@ body {
     .text-section {
         padding-right: 0;
     }
+    
+    .ceremony-section {
+        padding: 5rem 3rem;
+    }
+    
+    .ceremony-main-title {
+        font-size: 3rem;
+    }
+    
+    .ceremony-content-wrapper {
+        gap: 3rem;
+    }
+    
+    .ceremony-number {
+        font-size: 6rem;
+    }
 
     .image-grid {
         grid-template-columns: 1fr;
@@ -765,47 +851,37 @@ body {
         padding: 4rem 2rem;
     }
     
-    .ceremony-watercolor {
-        margin: 3rem auto;
-        border-radius: 15px;
-    }
-    
-    .ceremony-timeline {
-        gap: 1.5rem;
-    }
-    
-    .timeline-item {
-        min-width: 100%;
-        padding: 1.5rem;
-    }
-    
-    .timeline-icon {
+    .ceremony-main-title {
         font-size: 2.5rem;
-        margin-bottom: 1rem;
     }
     
-    .timeline-title {
-        font-size: 1.3rem;
-    }
-    
-    .timeline-text {
-        font-size: 1.1rem;
-    }
-    
-    .ceremony-message {
-        padding: 2rem 1.5rem;
-        margin-top: 3rem;
-    }
-    
-    .ceremony-quote {
-        font-size: 1.4rem;
+    .ceremony-subtitle {
+        font-size: 1rem;
+        margin-bottom: 3rem;
         padding: 0 1rem;
     }
     
-    .ceremony-quote::before {
-        font-size: 3rem;
-        left: -5px;
-        top: -15px;
+    .ceremony-content-wrapper {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .ceremony-numbers-column {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding-top: 0;
+        gap: 2rem;
+    }
+    
+    .ceremony-number {
+        writing-mode: horizontal-tb;
+        text-orientation: mixed;
+        font-size: 4rem;
+    }
+    
+    .ceremony-map {
+        height: 350px;
     }
 
     .carousel-image {
